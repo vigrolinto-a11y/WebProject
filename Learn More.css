@@ -1,0 +1,164 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fffaf6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #f47b3a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-left h2 {
+  font-size: 1.6rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #ffd3b1;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url('birds-banner.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f47b3a;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ===== Content Section ===== */
+.content {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+  color: #f47b3a;
+  margin-bottom: 10px;
+}
+
+.content p, .content ul {
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+/* ===== Blockquote ===== */
+blockquote {
+  background-color: #fff2e8;
+  border-left: 5px solid #f47b3a;
+  padding: 15px 20px;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn a {
+  background-color: #f47b3a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.back-btn a:hover {
+  background-color: #ff955b;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #f47b3a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 25px 15px;
+  }
+}

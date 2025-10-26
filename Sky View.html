@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Birdwatching in Botswana - Home</title>  
+  <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+  <link rel="stylesheet" type="text/css" href="Sky View.css">
+
+  <header>  
+    <div class="header-left">
+      <img src="LOGO.png" alt="logo" width="100" height="100">
+      <h2 class="site-name">Sky View</h2>
+    </div>
+    
+    <nav>  
+      <a href="index.html" class="active">Home</a>  
+      <a href="SV Ex.html">Explore</a>  
+      <a href="Birds SV.html">Birds</a>  
+      <a href="About Us.html">About Us</a>  
+      <a href="Login.html" class="login-icon" title="Login">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/user.png" alt="Login Icon">
+      </a>
+    </nav>  
+  </header>  
+  
+  <section class="hero">  
+    <div class="search-bar">  
+      <input type="text" placeholder="Search birds...">  
+      <button>🔍</button>  
+    </div>  
+    <div class="slider">
+      <img src="download.jpeg" alt="African Hoopoe" class="slide active">
+      <img src="download (6).jpeg" alt="Malachite Kingfisher" class="slide">
+      <img src="JACANA.jpeg" alt="African Jacana" class="slide">
+    </div>
+
+     <!-- Working Search Bar -->
+    <form class="search-bar" action="https://www.google.com/search" method="get" target="_blank">
+      <input type="text" name="q" placeholder="Search the web...">
+      <button type="submit">🔍</button>
+    </form>
+  </section>  
+  
+  <section class="content">  
+    <div class="gallery">  
+      <div class="card">  
+        <img src="JACANA.jpeg" alt="African Jacana">  
+        <p><strong>African Jacana</strong><br>Found in Okavango</p>  
+      </div>  
+      <div class="card">  
+        <img src="download (6).jpeg" alt="Malachite Kingfisher">  
+        <p><strong>Malachite Kingfisher</strong><br>Found in Okavango</p>  
+      </div>  
+    </div>  
+  
+    <p class="description">  
+      Botswana is home to over 600 avian species, with an exceptional variety found in its wetlands and savannahs.   
+      Birdwatchers can enjoy the African Skimmer, Pel’s Fishing Owl, and the Yellow-billed Stork among many others.  
+    </p>  
+  </section>  
+  
+  <footer>
+    <div class="socials">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/whatsapp.png" alt="WhatsApp"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/twitter.png" alt="Twitter"/></a>
+    </div>
+  </footer>
+
+  <script>
+    // Simple auto-slideshow
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+    
+    const pages = [
+      { title: "Home", url: "index.html", content: "Botswana birdwatching, African Skimmer, Pel’s Fishing Owl, Yellow-billed Stork, Sky View homepage" },
+      { title: "Explore", url: "explore.html", content: "Explore bird habitats, Okavango Delta, best time for birdwatching, Botswana nature" },
+      { title: "Birds", url: "birds.html", content: "African Jacana, Malachite Kingfisher, White-Crowned Lapwing, Coucal, Flamingos" },
+      { title: "About Us", url: "about.html", content: "About our project, bird conservation, Botswana wildlife awareness" },
+      { title: "Login", url: "login.html", content: "User login, Sky View account access, sign in page" }
+    ];
+
+    const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.getElementById("searchInput");
+    const resultsDiv = document.getElementById("searchResults");
+
+    searchBtn.addEventListener("click", () => {
+      const query = searchInput.value.toLowerCase().trim();
+      resultsDiv.innerHTML = "";
+
+      if (query === "") {
+        resultsDiv.innerHTML = "<p class='notice'>Please enter a search term.</p>";
+        return;
+      }
+
+      const matches = pages.filter(page =>
+        page.title.toLowerCase().includes(query) ||
+        page.content.toLowerCase().includes(query)
+      );
+
+      if (matches.length === 0) {
+        resultsDiv.innerHTML = "<p class='notice'>No results found for \"" + query + "\".</p>";
+      } else {
+        resultsDiv.innerHTML = "<h2>Results:</h2>" + 
+          matches.map(m => `
+            <div class="result-item">
+              <h3>${m.title}</h3>
+              <p>${m.content.slice(0, 100)}...</p>
+              <a href="${m.url}">Go to page</a>
+            </div>
+          `).join("");
+      }
+    });
+
+    // Press Enter to search
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        searchBtn.click();
+      }
+    });
+  </script>
+</body>  
+</html>

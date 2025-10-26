@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <header>  
+    <div class="header-left">
+      <img src="LOGO.png" alt="logo" width="100" height="100">
+      <h2 class="site-name">Sky View</h2>
+    </div>
+    
+    <nav>  
+      <a href="Sky View.html">Home</a>
+      <a href="SV Ex.html" class="active">Explore</a>
+      <a href="Birds SV.html">Birds</a>
+      <a href="About Us.html">About Us</a>
+      <a href="Login.html" class="login-icon" title="Login">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/user.png" alt="Login Icon">
+      </a>
+    </nav>  
+  </header>  
+<body>
+  <link rel="stylesheet" type="text/css" href="About Us.css">
+  <section class="hero">  
+    <div class="search-bar">  
+      <input type="text" placeholder="Search birds...">  
+      <button>🔍</button>  
+    </div>  
+    <div class="slider">
+      <img src="download.jpeg" alt="African Hoopoe" class="slide active">
+      <img src="download (6).jpeg" alt="Malachite Kingfisher" class="slide">
+      <img src="JACANA.jpeg" alt="African Jacana" class="slide">
+    </div>
+  </section>  
+  <section class="about">
+    <h1>About Our Birdwatching Project</h1>
+    <p>
+      This project was created to showcase the diverse bird species found in Botswana.
+      Our mission is to promote conservation, raise awareness, and inspire appreciation
+      for the country’s rich avian life.
+    </p>
+    <p>
+      Whether you're a beginner or an expert birder, our website helps you discover new
+      species, explore habitats, and learn the best times to watch birds in Botswana.
+    </p>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/whatsapp.png" alt="WhatsApp"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/twitter.png" alt="Twitter"/></a>
+    </div>
+    <p>© 2025 Sky View | Birdwatching in Botswana</p>
+  </footer>
+
+  <script>
+    // Simple auto-slideshow
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>

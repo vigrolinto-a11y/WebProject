@@ -1,0 +1,172 @@
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffe2d1;
+  color: #333;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff8c61;
+  padding: 10px 30px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+.site-name {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a.active, nav a:hover {
+  color: #333;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+nav a.active,
+nav a:hover {
+  color: #333;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Login Icon */
+.login-icon img {
+  vertical-align: middle;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.login-icon img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.search-bar {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 10;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  width: 250px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #ff8c61;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: #ffe9dc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ff8c61;
+  color: white;
+  margin-top: 40px;
+}
+
+.socials a {
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+</style>

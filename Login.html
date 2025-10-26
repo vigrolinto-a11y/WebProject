@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky View - Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <header>
+    <a href="Sky View.html" class="logo-link">
+      <div class="logo-section">
+        <img src="LOGO.png" alt="Sky View Logo" class="logo">
+        <h2>Sky View</h2>
+      </div>
+    </a>
+  </header>
+
+  <main class="login-container">
+    <div class="login-card">
+      <h1>Login</h1>
+      <p>Welcome back to Sky View! Please sign in to continue exploring Botswana’s amazing birds.</p>
+
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+
+        <label for="password">Password</label>
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <span id="togglePassword" class="toggle">👁️</span>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="links">
+        <a href="#">Forgot password?</a>
+        <a href="#">Create an account</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Sky View | Birdwatching in Botswana</p>
+  </footer>
+
+  <script>
+    // Show/hide password toggle
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+
+    togglePassword.addEventListener("click", () => {
+      const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+      passwordField.setAttribute("type", type);
+
+      // Toggle icon style
+      togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+    });
+  </script>
+
+</body>
+</html>

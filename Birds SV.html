@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birds of Botswana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link rel="stylesheet" type="text/css" href="Birds SV.css">
+
+  <header>
+    <div class="header-left">
+      <img src="LOGO.png" alt="logo" width="100" height="100">
+      <h2 class="site-name">Sky View</h2>
+    </div>
+    <nav>
+      <a href="Sky View.html">Home</a>
+      <a href="SV Ex.html" class="active">Explore</a>
+      <a href="Birds SV.html">Birds</a>
+      <a href="About Us.html">About Us</a>
+      <a href="Login.html" class="login-icon" title="Login">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/user.png" alt="Login Icon">
+      </a>
+    </nav>
+  </header>
+
+  <section class="hero">  
+    <div class="search-bar">  
+      <input type="text" placeholder="Search birds...">  
+      <button>🔍</button>  
+    </div>  
+    <div class="slider">
+      <img src="download (1).jpeg" alt="African Hoopoe" class="slide active">
+      <img src="download (8).jpeg" alt="Malachite Kingfisher" class="slide">
+      <img src="images (5).jpeg" alt="African Jacana" class="slide">
+    </div>
+  </section>  
+  <section class="content">
+    <div class="gallery">
+      <div class="card">
+        <img src="images (1).jpeg" alt="White-Crowned Lapwing">
+        <p><strong>White-Crowned Lapwing</strong><br>Found in the northwest of Botswana</p>
+      </div>
+      <div class="card">
+        <img src="download (11).jpeg" alt="Coucal">
+        <p><strong>Coppery-tailed Coucal</strong><br>Found in marshy areas</p>
+      </div>
+      <div class="card">
+        <img src="download (9).jpeg" alt="Flamingos">
+        <p>Large flocks of flamingos can be seen in salt pans.</p>
+      </div>
+    </div>
+
+    <button class="btn"> <a href="Learn More.html">Learn More</a></button>
+     
+  </section>
+   
+  <footer>
+    <div class="socials">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/facebook-new.png" alt="Facebook"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/instagram-new.png" alt="Instagram"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/whatsapp.png" alt="WhatsApp"/></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/40/000000/twitter.png" alt="Twitter"/></a>
+    </div>
+    <p>© 2025 Sky View | Birdwatching in Botswana</p>
+  </footer>
+
+  <script>
+    // Simple auto-slideshow
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
